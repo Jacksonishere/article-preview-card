@@ -49,22 +49,23 @@
 				}
 			}
 			.share {
-                // background-color: $Desaturated-Dark-Blue;
                 position: relative;
                 z-index: 10;
 				justify-self: flex-end;
 				&-btn {
-                    background-color: $Desaturated-Dark-Blue;
+                    background-color: $Light-Grayish-Blue;
 					width: 36px;
 					height: 36px;
 					border-radius: 100%;
 					border: none;
                     cursor: pointer;
+                    transition: background-color .3s ease;
                     
+                    svg > path{
+                        transition: fill .3s ease;
+                        // fill: #FFFFFF;
+                    }
 				}
-                &-img{
-                    fill: $Light-Grayish-Blue;
-                }
 			}
 			.hidden-share {
 				background-color: $Very-Dark-Grayish-Blue;
@@ -82,7 +83,7 @@
                 transform: translateY(100%);
                 opacity: 0;
 
-                transition: transform .2s ease-in-out, opacity .2s ease-in-out;
+                transition: transform .3s ease, opacity .3s ease;
 
 				@include grid(center);
 				grid-template-columns: auto 1fr;
@@ -118,7 +119,18 @@
 .in{
     transform: translateY(0%) !important;
     opacity: 1 !important;
+
+
 }
+
+.in-btn{
+    background-color: $Desaturated-Dark-Blue !important;
+
+    svg > path{
+        fill: $Light-Grayish-Blue;
+    }
+}   
+
 
 // .in{
 //     animation: mobile-in .3s ease forwards;
@@ -127,21 +139,21 @@
 //     animation: mobile-out .3s ease forwards;
 // }
 
-@keyframes mobile-in{
-    0%{
-        transform: translateY(100%);
-        opacity: 0;
-    }
+// @keyframes mobile-in{
+//     0%{
+//         transform: translateY(100%);
+//         opacity: 0;
+//     }
 
-    100%{
-        transform: translateY(0%);
-        opacity: 1;
-    }
-}
+//     100%{
+//         transform: translateY(0%);
+//         opacity: 1;
+//     }
+// }
 
-@keyframes mobile-out{
-    0%{
-        transform: translateY(0%);
-        opacity: 0;
-    }
-}
+// @keyframes mobile-out{
+//     0%{
+//         transform: translateY(0%);
+//         opacity: 0;
+//     }
+// }

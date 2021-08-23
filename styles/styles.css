@@ -115,16 +115,19 @@ ul {
 }
 
 .content .blog-profile-card .share-btn {
-  background-color: #6d7f97;
+  background-color: #ecf2f8;
   width: 36px;
   height: 36px;
   border-radius: 100%;
   border: none;
   cursor: pointer;
+  -webkit-transition: background-color .3s ease;
+  transition: background-color .3s ease;
 }
 
-.content .blog-profile-card .share-img {
-  fill: #ecf2f8;
+.content .blog-profile-card .share-btn svg > path {
+  -webkit-transition: fill .3s ease;
+  transition: fill .3s ease;
 }
 
 .content .blog-profile-card .hidden-share {
@@ -141,10 +144,10 @@ ul {
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
   opacity: 0;
-  -webkit-transition: opacity .2s ease-in-out, -webkit-transform .2s ease-in-out;
-  transition: opacity .2s ease-in-out, -webkit-transform .2s ease-in-out;
-  transition: transform .2s ease-in-out, opacity .2s ease-in-out;
-  transition: transform .2s ease-in-out, opacity .2s ease-in-out, -webkit-transform .2s ease-in-out;
+  -webkit-transition: opacity .3s ease, -webkit-transform .3s ease;
+  transition: opacity .3s ease, -webkit-transform .3s ease;
+  transition: transform .3s ease, opacity .3s ease;
+  transition: transform .3s ease, opacity .3s ease, -webkit-transform .3s ease;
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
@@ -195,45 +198,11 @@ ul {
   opacity: 1 !important;
 }
 
-@-webkit-keyframes mobile-in {
-  0% {
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-    opacity: 1;
-  }
+.in-btn {
+  background-color: #6d7f97 !important;
 }
 
-@keyframes mobile-in {
-  0% {
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes mobile-out {
-  0% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-    opacity: 0;
-  }
-}
-
-@keyframes mobile-out {
-  0% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-    opacity: 0;
-  }
+.in-btn svg > path {
+  fill: #ecf2f8;
 }
 /*# sourceMappingURL=styles.css.map */
