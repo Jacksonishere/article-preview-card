@@ -1,0 +1,38 @@
+/** RESET **/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/** BASE **/
+body {
+	position: relative;
+	font-family: 'Manrope', sans-serif;
+	font-size: .875rem;
+	min-height: 100vh;
+	line-height: 1.6;
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	background-color: $Light-Grayish-Blue;
+}
+
+img{
+	max-width: 100%;
+}
+
+h1{
+	font-size: 1rem;
+	color: $Very-Dark-Grayish-Blue;
+}
+
+p{
+	color: $Desaturated-Dark-Blue;
+}
+
+ul{
+	list-style-type: none;
+}
