@@ -1,7 +1,7 @@
 .content {
 	border-radius: 1rem;
 	width: 90%;
-    max-width: 375px;
+	max-width: 375px;
 	background-color: white;
 
 	@include flex(column);
@@ -17,7 +17,8 @@
 	}
 
 	.blog {
-        overflow: hidden;
+        border-bottom: 1px transparent solid;
+		overflow: hidden;
 		position: relative;
 		padding-block: 2.5rem 0;
 
@@ -28,8 +29,9 @@
 			padding: 1.25rem 2rem;
 		}
 		&-profile-card {
+			margin: .625rem 0;
 			outline: solid 1px magenta;
-			padding: 1.25rem 2rem;
+			padding: .625rem 2rem;
 			@include grid(center);
 			grid-template-columns: auto auto 1fr;
 			width: 100%;
@@ -49,22 +51,26 @@
 				}
 			}
 			.share {
-                position: relative;
-                z-index: 10;
+				position: relative;
+				z-index: 10;
 				justify-self: flex-end;
 				&-btn {
-                    background-color: $Light-Grayish-Blue;
+					background-color: $Light-Grayish-Blue;
 					width: 36px;
 					height: 36px;
 					border-radius: 100%;
 					border: none;
-                    cursor: pointer;
-                    transition: background-color .3s ease;
-                    
-                    svg > path{
-                        transition: fill .3s ease;
-                        // fill: #FFFFFF;
-                    }
+					cursor: pointer;
+					transition: background-color 0.3s ease;
+
+					// &-btn {
+					// 	position: relative;
+					// 	z-index: 10;
+					// }
+					svg > path {
+						transition: fill 0.3s ease;
+						// fill: #FFFFFF;
+					}
 				}
 			}
 			.hidden-share {
@@ -74,16 +80,15 @@
 				bottom: 0;
 				left: 0;
 				width: 100%;
-				height: 84px;
-				// display: none;
-                padding: 1rem 2rem;
-                border-bottom-left-radius: 1rem; 
-                border-bottom-right-radius: 1rem; 
+				height: 74px;
+				padding: 1rem 2rem;
+				border-bottom-left-radius: 1rem;
+				border-bottom-right-radius: 1rem;
 
-                transform: translateY(100%);
-                opacity: 0;
+				transform: translateY(100%);
+				opacity: 0;
 
-                transition: transform .3s ease, opacity .3s ease;
+				transition: transform 0.3s ease, opacity 0.3s ease;
 
 				@include grid(center);
 				grid-template-columns: auto 1fr;
@@ -94,43 +99,39 @@
 					letter-spacing: 0.375rem;
 				}
 				ul {
-                    margin-left: 2rem;
-                    line-height: 0;
+					margin-left: 1rem;
+					line-height: 0;
 					@include flex(row, center);
-                    
-                    li{
-                        // height: 22px;
-                        width: 22px;
-                        img{
-                            width: 100%;
-                            height: auto;
-                        }
 
-                        &:not(:first-child){
-                            margin-left: 1rem;
-                        }
-                    }
+					li {
+						max-width: 22px;
+						img {
+							width: 100%;
+							height: auto;
+						}
+
+						&:not(:first-child) {
+							margin-left: 1rem;
+						}
+					}
 				}
 			}
 		}
 	}
 }
 
-.in{
-    transform: translateY(0%) !important;
-    opacity: 1 !important;
-
-
+.in {
+	transform: translateY(0%) !important;
+	opacity: 1 !important;
 }
 
-.in-btn{
-    background-color: $Desaturated-Dark-Blue !important;
+.in-btn {
+	background-color: $Desaturated-Dark-Blue !important;
 
-    svg > path{
-        fill: $Light-Grayish-Blue;
-    }
-}   
-
+	svg > path {
+		fill: $Light-Grayish-Blue;
+	}
+}
 
 // .in{
 //     animation: mobile-in .3s ease forwards;
