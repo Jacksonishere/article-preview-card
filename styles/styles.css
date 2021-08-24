@@ -46,8 +46,8 @@ ul {
   width: 90%;
   max-width: 375px;
   background-color: white;
-  -webkit-box-shadow: 0 20px 1px 0px rgba(109, 127, 151, 0.8);
-          box-shadow: 0 20px 1px 0px rgba(109, 127, 151, 0.8);
+  -webkit-box-shadow: 0 20px 40px -16px rgba(109, 127, 151, 0.45);
+          box-shadow: 0 20px 40px -16px rgba(109, 127, 151, 0.45);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

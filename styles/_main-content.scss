@@ -3,7 +3,7 @@
 	width: 90%;
 	max-width: 375px;
 	background-color: white;
-    box-shadow: 0 20px 40px -16px rgb(109 127 151 / 40%);
+    box-shadow: 0 20px 40px -16px rgba(109,127, 151, .45);
 
 	@include flex(column);
 	@include breakpoint-up(large) {
