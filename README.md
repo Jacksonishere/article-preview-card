@@ -34,4 +34,4 @@ Users should be able to:
 ### What I learned
 1. You can have multiple transitions. 
 2. Use svg instead of image, then you can change some of the properties like the fill of the shape.
-3. z-index layering.https://stackoverflow.com/questions/2503705/how-to-get-a-child-element-to-show-behind-lower-z-index-than-its-parent. 
+3. z-index layering.https://stackoverflow.com/questions/2503705/how-to-get-a-child-element-to-show-behind-lower-z-index-than-its-parent. z-index of child is limited by parent, so if z-index of parent is 1 and child is 1000, and the sibling of parent z-index is 2, the child with 1000 is limited by parents 1, so the sibling will cover it. 
