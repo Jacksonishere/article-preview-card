@@ -3,39 +3,63 @@
 	width: 90%;
 	max-width: 375px;
 	background-color: white;
+    box-shadow: 0 20px 40px -16px rgb(109 127 151 / 40%);
 
 	@include flex(column);
+	@include breakpoint-up(large) {
+		flex-direction: row;
+		max-width: 728px;
+		height: 280px;
+	}
 
 	.cover-photo {
 		img {
 			object-fit: cover;
+			object-position: left 0 top 0;
 			width: 100%;
 			height: 200px;
 			border-top-left-radius: 1rem;
 			border-top-right-radius: 1rem;
 		}
+		@include breakpoint-up(large) {
+			width: 39%;
+
+			img {
+				height: 100%;
+				border-bottom-left-radius: 1rem;
+				border-top-right-radius: 0;
+			}
+		}
 	}
 
 	.blog {
-        border-bottom: 1px transparent solid;
+		border-bottom: 1px transparent solid;
 		overflow: hidden;
 		position: relative;
-		padding-block: 2.5rem 0;
+		padding-block: 2.375rem 0;
+
+		@include breakpoint-up(large) {
+			overflow: visible;
+			width: 61%;
+		}
 
 		&-heading {
-			padding: 0 2rem;
+			padding: 0 2.5625rem;
 		}
 		&-post {
-			padding: 1.25rem 2rem;
+			padding: 1.25rem 2.5625rem;
 		}
 		&-profile-card {
-			margin: .625rem 0;
-			outline: solid 1px magenta;
-			padding: .625rem 2rem;
+			margin: 0.625rem 0;
+			padding: 0.625rem 2rem;
 			@include grid(center);
 			grid-template-columns: auto auto 1fr;
 			width: 100%;
 
+			@include breakpoint-up(large) {
+				margin: 0;
+				padding: 0 2.5625rem;
+			}
 			.avatar {
 				height: 40px;
 				img {
@@ -69,7 +93,6 @@
 					// }
 					svg > path {
 						transition: fill 0.3s ease;
-						// fill: #FFFFFF;
 					}
 				}
 			}
@@ -88,7 +111,7 @@
 				transform: translateY(100%);
 				opacity: 0;
 
-				transition: transform 0.3s ease, opacity 0.3s ease;
+				transition: transform 0.2s ease, opacity 0.2s ease;
 
 				@include grid(center);
 				grid-template-columns: auto 1fr;
@@ -115,6 +138,25 @@
 						}
 					}
 				}
+				@include breakpoint-up(large) {
+					width: 250px;
+					height: 55px;
+					border-radius: 8px;
+					left: 56.5%;
+					transform: translateY(-25%);
+
+					&::before {
+						content: "";
+						position: absolute;
+						bottom: -9px;
+						left: 50%;
+						background: $Very-Dark-Grayish-Blue;
+						width: 18px;
+						height: 18px;
+						transform-origin: center;
+						transform: rotate(45deg);
+					}
+				}
 			}
 		}
 	}
@@ -123,6 +165,10 @@
 .in {
 	transform: translateY(0%) !important;
 	opacity: 1 !important;
+
+	@include breakpoint-up(large) {
+		transform: translateY(-160%) !important;
+	}
 }
 
 .in-btn {
